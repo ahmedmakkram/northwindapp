@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Application Details
 |               |
 | ------------- |
@@ -41,3 +42,6 @@ Product list from Northwind OData service
 1. Active NodeJS LTS (Long Term Support) version and associated supported NPM version.  (See https://nodejs.org)
 
 
+=======
+# northwindapp
+>>>>>>> 52305c26bd80098a9c43eb30b79d8d5aba0b4ba2
