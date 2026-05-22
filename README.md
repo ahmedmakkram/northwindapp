@@ -1,47 +1,42 @@
-<<<<<<< HEAD
-## Application Details
-|               |
-| ------------- |
-|**Generation Date and Time**<br>Fri May 22 2026 08:54:09 GMT+0000 (Coordinated Universal Time)|
-|**App Generator**<br>SAP Fiori Application Generator|
-|**App Generator Version**<br>1.24.0|
-|**Generation Platform**<br>SAP Business Application Studio|
-|**Template Used**<br>List Report Page V2|
-|**Service Type**<br>OData URL|
-|**Service URL**<br>https://services.odata.org/V2/Northwind/Northwind.svc/|
-|**Module Name**<br>northwindapp|
-|**Application Title**<br>Northwind Products|
-|**Namespace**<br>com.intern.northwindapp|
-|**UI5 Theme**<br>sap_horizon|
-|**UI5 Version**<br>1.148.0|
-|**Enable TypeScript**<br>False|
-|**Add Eslint configuration**<br>True, see https://www.npmjs.com/package/@sap-ux/eslint-plugin-fiori-tools#rules for the eslint rules.|
-|**Main Entity**<br>Products|
-|**Navigation Entity**<br>None|
+# Northwind Products App
 
-## northwindapp
+A Fiori List Report app that pulls product data from the Northwind OData service, 
+built on SAP BTP as part of the Solex internship assessment.
 
-Product list from Northwind OData service
+## Architecture Overview
 
-### Starting the generated app
+Three things work together here: a Destination in BTP Cockpit that connects to 
+the Northwind service, Business Application Studio where I built and tested the 
+app, and Cloud Foundry which handles deployment on BTP.
 
--   This app has been generated using the SAP Fiori tools - App Generator, as part of the SAP Fiori tools suite.  To launch the generated application, run the following from the generated application root folder:
+## Setup Instructions
 
-```
-    npm start
-```
+1. Register for a free SAP BTP Trial at https://account.hanatrial.ondemand.com
+2. Subscribe to Business Application Studio and assign yourself the Developer role
+3. Create a Destination called `Northwind` pointing to `https://services.odata.org`
+4. Set Authentication to NoAuthentication and add these two properties:
+   - WebIDEEnabled: true
+   - WebIDEUsage: odata_gen
+5. Open BAS, create a Fiori dev space and run the Application Generator
+6. Connect to `/V2/Northwind/Northwind.svc/` and pick the Products entity
 
-- It is also possible to run the application using mock data that reflects the OData Service URL supplied during application generation.  In order to run the application with Mock Data, run the following from the generated app root folder:
+## OData Entity Used
 
-```
-    npm run start-mock
-```
+I went with the Products entity — it has fields like ProductName, UnitPrice and 
+UnitsInStock which felt like the most realistic thing to display in a list.
 
-#### Pre-requisites:
+## Challenges Faced
 
-1. Active NodeJS LTS (Long Term Support) version and associated supported NPM version.  (See https://nodejs.org)
+The preview kept opening a file browser instead of the actual app. Took me a bit 
+to figure out I needed to manually add `/test/flp.html#app-preview` to the URL. 
+Also had a Git conflict on the first push which I sorted out by pulling first 
+then force pushing.
 
+## Bonus Tasks Completed
 
-=======
-# northwindapp
->>>>>>> 52305c26bd80098a9c43eb30b79d8d5aba0b4ba2
+None attempted in this submission.
+
+## Screenshots
+
+![Destination Configuration](docs/destination.png)
+![BAS App Preview](docs/bas-preview.png)
