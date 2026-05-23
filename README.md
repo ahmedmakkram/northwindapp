@@ -36,18 +36,13 @@ switching to a clean html5-repo deployment without a standalone approuter.
 
 ## Bonus Tasks Completed
 
-- **B1 - Cloud Foundry Deployment:** App built using MTA tools and deployed to 
-SAP BTP HTML5 Application Repository. Confirmed via cf html5-list showing live 
-URL dated 23 May 2026.
+- **B1 — Cloud Foundry Deployment:** Successfully built and deployed the multi-target application (MTA) archive to SAP BTP Cloud Foundry using the HTML5 Repository Service. Built using `mbt build` and deployed via `cf deploy`.
 
-- **B2 - Postman OData Queries:** Tested $top, $filter, $select and $orderby 
-against the live Northwind service. Collection exported and included in /docs.
+- **B2 — Postman OData Queries:** Tested four query options ($top, $filter, $select, $orderby) against the live Northwind service. Collection exported and included in /docs.
 
-- **B4 - Object Page:** Added drill-down navigation showing full product details 
-including ProductID, ProductName, UnitPrice, UnitsInStock and QuantityPerUnit.
+- **B4 — Fiori Object Page:** Added drill-down navigation from the list to a product detail page showing ProductID, ProductName, UnitPrice, UnitsInStock and QuantityPerUnit.
 
-- **B5 - OData POST Request:** Successfully posted a new product to a writable 
-OData mock service and got a 201 Created response. Screenshot in /docs.
+- **B5 — OData POST Request:** Successfully posted a new product to a writable OData mock service and received a 201 Created response. Screenshot included in /docs.
 
 ## Deployed Application URL
 
