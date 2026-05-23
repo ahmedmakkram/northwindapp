@@ -30,13 +30,32 @@ UnitsInStock which felt like the most realistic thing to display in a list.
 The preview kept opening a file browser instead of the actual app. Took me a bit 
 to figure out I needed to manually add `/test/flp.html#app-preview` to the URL. 
 Also had a Git conflict on the first push which I sorted out by pulling first 
-then force pushing.
+then force pushing. During deployment, the approuter kept crashing due to a 
+grant_type mismatch between the html5-apps-repo service plans — resolved by 
+switching to a clean html5-repo deployment without a standalone approuter.
 
 ## Bonus Tasks Completed
 
-None attempted in this submission.
+- **B1 - Cloud Foundry Deployment:** App built using MTA tools and deployed to 
+SAP BTP HTML5 Application Repository. Confirmed via cf html5-list showing live 
+URL dated 23 May 2026.
+
+- **B2 - Postman OData Queries:** Tested $top, $filter, $select and $orderby 
+against the live Northwind service. Collection exported and included in /docs.
+
+- **B4 - Object Page:** Added drill-down navigation showing full product details 
+including ProductID, ProductName, UnitPrice, UnitsInStock and QuantityPerUnit.
+
+- **B5 - OData POST Request:** Successfully posted a new product to a writable 
+OData mock service and got a 201 Created response. Screenshot in /docs.
+
+## Deployed Application URL
+
+https://e23abb4ftrial.cpp.cfapps.us10.hana.ondemand.com/5b628265-7c95-41c0-8fc2-a12899a7a63b.cominternnorthwindappnorthwindapp.cominternnorthwindappnorthwindapp-0.0.1/
 
 ## Screenshots
 
 ![Destination Configuration](docs/destination.png)
 ![BAS App Preview](docs/bas-preview.png)
+![Object Page](docs/object-page.png)
+![CF Deployment](docs/cf-deploy-success.png)
